@@ -21,6 +21,8 @@ public class Copy {
 
     if (args.length == 0) {
       System.out.println("copy [source] [destination]");
+    } else if (args.length == 1) {
+      System.out.println("No destination provided");
     }
   }
 }
