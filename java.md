@@ -35,16 +35,17 @@ The application is accepted if:
 ![anatomy](anatomy/AnatomyJava.png)
 
 #### Your answer:
-[add your answer here]   
-1:   
-2:   
-3:   
-4:   
-5:   
+   
+1:   signature
+2:   return type
+3:   name
+4:   parameter type(s)
+5:   parameter name(s)
 6:   
-7:   
-8:   
+7:   body
+8:   return statement
 
 ### What is the constructor? When it is used? [2p]
 #### Your answer:
-[add your answer here]
+
+The constructor creates an object in memory which will be the instance of the class. Such an object is needed to access the non-static methods and fields of that class.
