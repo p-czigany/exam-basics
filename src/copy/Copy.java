@@ -1,4 +1,6 @@
 package copy;
+import java.nio.file.Paths;
+import java.util.List;
 
 /**
  * Created by peter on 2017.04.18..
@@ -23,6 +25,10 @@ public class Copy {
       System.out.println("copy [source] [destination]");
     } else if (args.length == 1) {
       System.out.println("No destination provided");
+    } else if (args.length == 2) {
+      FileHandler handler = new FileHandler();
+      List<String> linesToCopy = handler.readFromFile(Paths.get(args[0]));
+      handler.printToFile(Paths.get(args[1]), linesToCopy);
     }
   }
 }
