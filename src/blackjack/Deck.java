@@ -3,8 +3,7 @@ package blackjack;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by peter on 2017.04.18..
+/** * Created by peter on 2017.04.18..
  */
 public class Deck {
 
@@ -15,7 +14,24 @@ public class Deck {
     for (int i = 0; i < numberOfCards; i++) {
       while (cardsOfTheDeck.size() < i + 1) {
         Card toAdd = randomCard();
-        if (i == 0) {
+        boolean addable = true;
+        if (i > 0) {
+          for (Card examinedCard :
+                  cardsOfTheDeck) {
+            if (toAdd.printCard().equals(examinedCard.printCard())) {
+              addable = false;
+              if (i < 4) {
+                for (Card examinedCard2 :
+                        cardsOfTheDeck) {
+                  if (toAdd.getColor().equals(examinedCard2.getColor())) {
+                    addable = false;
+                  }
+                }
+              }
+            }
+          }
+        }
+        if (addable) {
           cardsOfTheDeck.add(toAdd);
         }
       }
