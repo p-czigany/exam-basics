@@ -15,7 +15,7 @@ public class Deck {
     for (int i = 0; i < numberOfCards; i++) {
       while (cardsOfTheDeck.size() < i + 1) {
         Card toAdd = randomCard();
-        if (i == 1) {
+        if (i == 0) {
           cardsOfTheDeck.add(toAdd);
         }
       }
